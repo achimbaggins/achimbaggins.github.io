@@ -42,7 +42,7 @@ if(playerSuwit == cpuSuwit){
 }
 
 //win info
-alert('Halo ' + playerName + '\nKamu Memilih : ' + playerSuwit + ' dan Komputer memilih : ' + cpuSuwit + '. Dan hasilnya kamu : ' + hasil);
+alert('Halo ' + playerName + '\nKamu Memilih : ' + playerSuwit + ' dan \nKomputer memilih : ' + cpuSuwit + '. \nDan hasilnya kamu : ' + hasil);
     
 
 }
