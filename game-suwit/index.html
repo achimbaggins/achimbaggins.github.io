@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Game - Aku Kertas Kamu Gunting!</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+       <!--        jumbotron -->
+        <div class="jumbotron text-center">
+            <img src="img/suwit.jpg" alt="" class="img-circle">
+            <h1>Maen Suwit Yuk!</h1>
+            <p class="text-danger">Pilih : Batu, Gunting atau Kertas?</p>
+        </div>
+        <!--  akhir jumbotron -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                     <label>Ketik Namamu :</label>
+                     <input type="text" class="form-control" placeholder="Ketik Namamu disini" id="player">
+                     <label>Pilihanmu :</label>
+                     <select class="form-control" id="suwit">
+                      <option>Pilih Suwitmu! </option>
+                      <option>Gunting </option>
+                      <option>Batu </option>
+                      <option>Kertas</option>
+                    </select>
+                    <br>
+                    <button type="button" class="btn btn-success btn-lg btn-block" onClick="suwit()">Suwit !</button>
+                    
+                    <br><br>
+                    <span id = "pesan">Aturan Main: <ul>
+                        <li>Gunting vs Kertas - Menang Gunting</li>
+                        <li>Gunting vs Batu - Menang Batu</li>
+                        <li>Kertas vs Batu - Menang Kertas</li>
+                    </ul>
+                    Dalam game sederhana ini, anda akan melawan Komputer yang pilihannya dibuat secara Acak! So Coba Keberuntunganmu! 
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <script src="js/play.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
