@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Dadu</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  
+  
+  
+   <div class="container  text-center">
+     <div class="col-sm-12 text-center">
+     <img src="img/jumbotron.png" class="img-circle">
+     <br><h1><a href="index.html">Game Dadu!</a></h1></div>
+      <form id="formValidasi" method="post" action="">
+        <div class="col-sm-2 col-sm-offset-2">
+         <input type="button" id="slot1" class="btn btn-success btn-lg btn-block" style="width:'100%'; heigh:'200px'; font-size:26pt;" value="Lempar!" onclick="document.getElementById('slot1').value = makeid1();  this.disabled=true;">
+         Lempar Dadu Pertama!
+        </div>
+        <div class="col-sm-2">
+                <input type="button" disabled='true' id="slot2" class="btn btn-info btn-lg btn-block" style="width:'100%'; heigh:'200px'; font-size:26pt;" value="Lempar!" onclick="document.getElementById('slot2').value = makeid2();  this.disabled=true;">
+         Lempar Dadu Kedua!
+        </div>
+        <div class="col-sm-2">
+                <input type="button"  disabled='true' id="slot3" class="btn btn-warning btn-lg btn-block" style="width:'100%'; heigh:'200px'; font-size:26pt;" value="Lempar!" onclick="document.getElementById('slot3').value = makeid3();  this.disabled=true;">
+         Lempar Dadu Ketiga!
+        </div>
+        <div class="col-sm-2">
+                <input type="button"  disabled='true' id="slot4" class="btn btn-danger btn-lg btn-block" style="width:'100%'; heigh:'200px'; font-size:26pt;" value="Lempar!" onclick="document.getElementById('slot4').value = makeid4();  this.disabled=true; play(arrPlay);">
+         Lempar Dadu Keempat!
+        </div>
+    </form>
+       <div class="col-sm-12 text-center">
+          <!--<div class="col-sm-4 col-sm-offset-2">
+           <input type="button" disabled='true'  id="slot5" class="btn btn-primary btn-lg btn-block" style="width='50%'; heigh='200px'; font-size:26pt;" value="Lihat Hasil!" onclick="play();  this.disabled=true;">
+           </div>
+           <div class="col-sm-4 col-sm-offset-4">
+           <input type="button"  id="slot6" class="btn btn-default btn-lg btn-block" style="width='50%'; heigh='200px'; font-size:26pt;" value="Ulang Game!">
+           </div>-->
+       </div>
+   </div>
+   
+   
+   
+   <!-- Awal Hasil dan Informasi Game -->
+    <div class='container text-center'>
+       <div class="col-sm-6 col-sm-offset-3">
+        <h1 id='hasil'  class="bg-primary"></h1>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Info Poin
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Sebagai poin awal, anda akan diberikan Poin senilai 2000 poin.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Aturan Main
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Aturan Main dalam game ini Mudah!
+        <ul>
+        <li>Poin awal Anda adalah 2000 poin</li>
+        <li>Dadu harus dilempar dari sebelah kiri, secara berurutan.</li>
+        <li>Anda akan mendapat reward poin jika setiap dadu menghasilkan angka selain angka 1 (satu)</li>
+        <li>Reward yang anda dapatkan adalah setiap angka dadu dikali 200 poin</li>
+        <li>Jika Semua dadu menghasilkan angka yang sama, maka setiap angka pada dadu dikali 500 poin</li>
+        <li>Jika terdapat angka 1 dalam dadu anda didenda 1000</li>
+        <li>Jika terdapat angka 1 dalam 2 dadu, anda didenda 2000 dst</li>
+        </ul>
+        Selamat bermain!
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          About Us
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Game ini sederhana, dalam pengembangan nanti akan diberi fitur saving poin, Gameover dst! <br>Terima Kasih!
+      </div>
+    </div>
+  </div>
+           </div></div>
+    </div>
+
+    
+    <script src="js/play.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
